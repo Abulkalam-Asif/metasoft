@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto.ttf")
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+}
+
+@theme {
+  --font-roboto: "Roboto";
+
+  --animate-fade-in: fadeIn 1s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+
+  }
+}
