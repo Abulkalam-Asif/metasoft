@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center before:absolute before:left-0 before:top-0 before:w-full before:h-1/2 before:z-[0] before:bg-[radial-gradient(circle_at_28%_31%,#2F1F6C_0%,black_70%_50%)] after:absolute after:right-0 after:bottom-0 after:w-full after:h-1/2 after:z-[0] after:bg-[radial-gradient(circle_at_58%_60%,#2F1F6C_0%,black_70%_50%)] animate-fade-in md:before:w-1/2 md:before:h-full md:after:w-1/2 md:after:h-full">
+      className="relative  min-h-screen flex items-center before:absolute before:left-0 before:top-0 before:w-full before:h-1/2 before:z-[0] before:bg-[radial-gradient(circle_at_28%_31%,#2F1F6C_0%,black_70%_50%)] after:absolute after:right-0 after:bottom-0 after:w-full after:h-1/2 after:z-[0] after:bg-[radial-gradient(circle_at_58%_60%,#2F1F6C_0%,black_70%_50%)] animate-fade-in md:before:w-1/2 md:before:h-full md:after:w-1/2 md:after:h-full">
       <div className="relative max-w-[1550px] mx-auto w-full z-[1]">
         <div className="flex flex-col gap-12 sm:gap-20 items-center justify-center mx-auto w-4/5 sm:w-3/5">
           <div className="flex flex-wrap text-4xl gap-y-4 gap-x-2 sm:gap-y-8 font-roboto sm:text-5xl md:text-6xl text-white font-bold justify-center  items-center text-center">
