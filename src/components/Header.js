@@ -12,6 +12,10 @@ export const navLinks = [
     href: "#",
   },
   {
+    text: "Apps",
+    href: "#",
+  },
+  {
     text: "Games",
     href: "#",
   },

@@ -30,28 +30,35 @@ const WhyChooseUs = () => {
       icon: IoRocketSharp,
       iconColor: "#DB5968",
       title: "Scalable & Future-Ready",
-      description: "Built to grow with your vision",
+      description: "Built to grow with your vision  ",
     },
   ];
 
   console.log(features);
 
   return (
-    <section>
-      <motion.div 
-      initial={{opacity: 0}}
-      whileInView={{opacity: 1}}
-      transition={{duration: 0.5}}
-      viewport={{ once: true,amount: 1  }}
-      className="max-w-4/5 border border-gray-400/50 rounded-4xl  flex  bg-white/10 text-white items-center justify-around mb-8 px-2 py-4 mx-auto gap-x-2">
+    <section className=" px-4 ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 1 }}
+        className="max-w-7xl grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4 border border-gray-400/50 rounded-4xl    bg-white/10 text-white  mb-8  py-6  mx-auto gap-x-2 px-4
+        "
+      >
         {features.map((feature, index) => (
-          <div key={index} className="flex items-center justify-center gap-x-0.5">
-            <span className="text-[42px] mr-2 " style={{ color: feature.iconColor }}>
+          <div key={index} className="flex   mx-auto gap-x-0.5">
+            <span
+              className=" text-[42px] mr-2 "
+              style={{ color: feature.iconColor }}
+            >
               <feature.icon />
             </span>
             <div>
               <h3 className="text-base font-medium">{feature.title}</h3>
-              <p className="max-w-[200px] text-white/50 text-sm">{feature.description}</p>
+              <p className="max-w-[200px] text-white/50 text-sm">
+                {feature.description}
+              </p>
             </div>
           </div>
         ))}

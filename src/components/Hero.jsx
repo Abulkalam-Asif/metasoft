@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="bg-gradient-to-r from-[#FF7EED]  to-[#d4a7ce]  rounded-full p-0.5">
             <Link
               to={"/"}
-              className="group bg-[#19021D] cursor-pointer text-white font-bold flex items-center justify-center gap-4 md:gap-7 py-2 px-8 rounded-full transition-all duration-300 border border-[#FF7EED] text-base md:text-xl ">
+              className="group bg-[#19021D] cursor-pointer text-white font-bold flex items-center justify-center gap-4 md:gap-7 py-2 px-8  rounded-full transition-all duration-300 border border-[#FF7EED] text-base md:text-xl ">
               <span className="font-roboto">Check Out</span>
               <span className="group-hover:translate-x-0 -translate-x-3 group-hover:-rotate-45 transition-all duration-300">
                 <FaArrowRight />
