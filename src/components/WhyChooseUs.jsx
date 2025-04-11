@@ -4,12 +4,14 @@ import { IoRocketSharp } from "react-icons/io5";
 import { GiProcessor } from "react-icons/gi";
 import { BsTools } from "react-icons/bs";
 import { BsLightningFill } from "react-icons/bs";
+import { FaLightbulb } from "react-icons/fa";
+
 import { motion } from "motion/react";
 
 const WhyChooseUs = () => {
   const features = [
     {
-      icon: BsLightningFill,
+      icon: FaLightbulb,
       iconColor: "#34FF41",
       title: "Instant Launch",
       description: "Deploy your apps & games effortlessly",
@@ -43,7 +45,7 @@ const WhyChooseUs = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 1 }}
-        className="max-w-7xl grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4 border border-gray-400/50 rounded-4xl    bg-white/10 text-white  mb-8  py-6  mx-auto gap-x-2 px-4
+        className="max-w-7xl grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4 border border-gray-400/50 rounded-4xl  bg-gradient-to-br to-white/10 from-[#34FF41]/30 t-white/10 text-white  mb-8  py-6  mx-auto gap-x-2 px-4
         "
       >
         {features.map((feature, index) => (
