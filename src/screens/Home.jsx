@@ -4,7 +4,9 @@ import SmallScreenNav from "../components/SmallScreenNav";
 import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import WhyChooseUs from "../components/WhyChooseUs";
-
+import StockTickerToLeft from "../components/StockTickerToLeft";
+import StockTickerToRight from "../components/StockTickerToRight";
+import Features from "../components/Features";
 const Home = () => {
   return (
     <>
@@ -12,7 +14,12 @@ const Home = () => {
       <LargeScreenNav />
       <Hero />
       <AboutSection />
-      <WhyChooseUs/>
+      <WhyChooseUs />
+      <div className="my-20">
+        <StockTickerToLeft />
+        <StockTickerToRight />
+      </div>
+      <Features />
     </>
   );
 };

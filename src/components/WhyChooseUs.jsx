@@ -3,16 +3,15 @@ import React from "react";
 import { IoRocketSharp } from "react-icons/io5";
 import { GiProcessor } from "react-icons/gi";
 import { BsTools } from "react-icons/bs";
-import { BsLightningFill } from "react-icons/bs";
-import { FaLightbulb } from "react-icons/fa";
+import { TbBulbFilled } from "react-icons/tb";
 
 import { motion } from "motion/react";
 
 const WhyChooseUs = () => {
   const features = [
     {
-      icon: FaLightbulb,
-      iconColor: "#34FF41",
+      icon: TbBulbFilled,
+      iconColor: "#FFD242",
       title: "Instant Launch",
       description: "Deploy your apps & games effortlessly",
     },
