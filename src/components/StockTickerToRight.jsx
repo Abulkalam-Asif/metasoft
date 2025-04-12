@@ -21,7 +21,7 @@ export default function DownloadTicker() {
   ];
   
   const tickerStyle = {
-    animation: "tickerRight 30s linear infinite",
+    animation: "tickerRight 40s linear infinite",
   };
 
   const StockTickerToRight = ({ item }) => (

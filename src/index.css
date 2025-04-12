@@ -30,7 +30,7 @@ body {
 }
 
 @theme {
-  --animate-ticker-left: scroll 25s linear infinite;
+  --animate-ticker-left: scroll 40s linear infinite;
 
   @keyframes scroll {
     to {
