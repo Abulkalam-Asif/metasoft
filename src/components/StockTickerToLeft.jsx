@@ -21,7 +21,7 @@ export default function DownloadTicker() {
   ];
 
   const StockTickerToLeft = ({ item }) => (
-    <li className="flex flex-col   items-center bg-gradient-to-br from-red-600 via-red-600/50  to-white/40 py-2 px-16 gap-2 rounded-3xl">
+    <li className="flex flex-col   items-center bg-gradient-to-br from-red-600 to-white/10 py-2 px-16 gap-2 rounded-3xl">
       <span className="text-white text-2xl font-bold">{item.text}</span>
       <div className="flex items-center justify-center text-xl text-gray-400">
         <span>

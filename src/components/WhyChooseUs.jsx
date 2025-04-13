@@ -44,15 +44,13 @@ const WhyChooseUs = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 1 }}
-        className="max-w-7xl grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4 border border-gray-400/50 rounded-4xl  bg-gradient-to-br to-white/10 from-[#34FF41]/30 t-white/10 text-white  mb-8  py-6  mx-auto gap-x-2 px-4
-        "
-      >
+        className="max-w-7xl grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4 border border-gray-400/50 rounded-4xl  bg-gradient-to-br from-[#34FF41]/30 to-white/10 text-white  mb-8  py-6  mx-auto gap-x-2 px-4
+        ">
         {features.map((feature, index) => (
           <div key={index} className="flex   mx-auto gap-x-0.5">
             <span
               className=" text-[42px] mr-2 "
-              style={{ color: feature.iconColor }}
-            >
+              style={{ color: feature.iconColor }}>
               <feature.icon />
             </span>
             <div>

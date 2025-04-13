@@ -5,8 +5,8 @@ import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import StockTickerToLeft from "../components/StockTickerToLeft";
-import StockTickerToRight from "../components/StockTickerToRight";
 import Features from "../components/Features";
+import Softwares from "../components/Softwares";
 const Home = () => {
   return (
     <>
@@ -15,11 +15,11 @@ const Home = () => {
       <Hero />
       <AboutSection />
       <WhyChooseUs />
-      <div className="my-20">
+      <div className="my-28">
         <StockTickerToLeft />
-        <StockTickerToRight />
       </div>
       <Features />
+      <Softwares />
     </>
   );
 };
