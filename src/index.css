@@ -9,8 +9,28 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --bg-primary: #000000;
+  --bg-secondary: #21222d;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --accent-primary: #FF7EED;
+  --gradient-primary: radial-gradient(circle at 28% 20%, #2F1F6C 0%, #0f0f13 70%);
+}
+
+:root[class~="light"] {
+  --bg-primary: #fdfdfd;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #1a1a1a;
+  --text-secondary: rgba(26, 26, 26, 0.7);
+  --accent-primary: #FF7EED;
+  --gradient-primary: radial-gradient(circle at 28% 20%, #e5e7ff 0%, #ffffff 70%);
+}
+
 body {
-  background-color: black;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @theme {

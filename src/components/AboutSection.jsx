@@ -1,6 +1,6 @@
 import React from "react";
-
 import { motion } from "motion/react";
+
 const AboutSection = () => {
   return (
     <>
@@ -10,13 +10,13 @@ const AboutSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 1 }}
           transition={{ duration: 1 }}
-          className="  max-w-7xl bg-[linear-gradient(130deg,#000c,#6d43ff99)] mx-auto border border-[#382480] rounded-3xl "
+          className="max-w-7xl bg-[var(--bg-secondary)]/80 mx-auto border border-[var(--accent-primary)]/30 rounded-3xl"
         >
           <div className="flex flex-col p-8 sm:p-12 md:p-16 lg:p-20 gap-y-4">
-            <h3 className="text-base md:text-lg font-bold text-white">
+            <h3 className="text-base md:text-lg font-bold text-[var(--text-primary)]">
               About MetaSoft
             </h3>
-            <div className="flex flex-col text-white/50 text-sm md:text-base gap-y-2">
+            <div className="flex flex-col text-[var(--text-secondary)] text-sm md:text-base gap-y-2">
               <p>
                 MetaSoft was founded on August 15, 2024, by Gameover with a
                 clear mission: to deliver innovative and effective software
