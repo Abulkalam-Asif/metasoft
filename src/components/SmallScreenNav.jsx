@@ -4,8 +4,8 @@ import { smallScreenNavItems } from "./Header";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
-import { FaSearch } from "react-icons/fa";
 import ThemeToggle from "./themeToggle/ThemeToggle";
+import SearchBar from "./SearchBar";
 
 const SmallScreenNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,21 +40,13 @@ const SmallScreenNav = () => {
           {smallScreenNavItems.map((item, index) => (
             <li
               key={index}
-              className="py-2 hover:text-white/80 transition-colors duration-300 hover:cursor-pointer">
+              className="py-2 relative group hover:text-white/80 transition-colors duration-300 hover:cursor-pointer">
               <Link to={"/"}>{item}</Link>
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </li>
           ))}
           <li className="w-full mt-2">
-            <div className="relative w-full">
-              <FaSearch className="absolute top-1/2 -translate-y-1/2 left-4 text-[#666b75] text-lg" />
-              <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Search"
-                className="w-full bg-[#21222d] text-white py-2 pl-12 pr-4 rounded-xl placeholder:text-[#666b75]"
-              />
-            </div>
+            <SearchBar isSmallScreen={true} />
           </li>
         </motion.ul>
       </div>

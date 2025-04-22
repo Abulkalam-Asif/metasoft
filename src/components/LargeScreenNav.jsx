@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { navLinks } from "./Header";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoPerson } from "react-icons/io5";
-import { FaSearch } from "react-icons/fa";
 import logo from "../assets/images/logo.svg";
 import ThemeToggle from "./themeToggle/ThemeToggle";
+import SearchBar from "./SearchBar";
 
 const LargeScreenNav = () => {
   const location = useLocation();
@@ -51,27 +51,21 @@ const LargeScreenNav = () => {
               <img src={logo} alt="logo" className="h-8 w-auto" />
             </Link>
 
-            <div className="relative">
-              <FaSearch
-                className={`absolute top-1/2 -translate-y-1/2 left-4 dark:;text-[#666b75] text-[#ffffff] text-lg`}
-              />
-              <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Search"
-                className={`w-full dark:bg-[#21222d] dark:placeholder:text-[#666b75] bg-[#848485] placeholder:text-[#ffffff] text-white py-1 pl-12 pr-4 rounded-xl `}
-              />
+            <div className="relative w-48">
+              <SearchBar darkMode={location.pathname === "/" ? true : false} isSmallScreen={false} />
             </div>
             <ul className="flex gap-4">
               {navLinks.map((link, index) => (
                 <a
                   href={isHomePage ? link.href : "/" + link.href}
                   key={index}
-                  onClick={(e) => handleNavClick(e, link.href)}>
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="group relative"
+                >
                   <li
-                    className={`hover:underline underline-offset-4 dark:text-white/50 dark:hover:text-white text-black hover:text-gray-900 transition-colors duration-300 hover:cursor-pointer`}>
+                    className={`dark:text-white/50 dark:hover:text-white text-black hover:text-gray-900 transition-colors duration-300 hover:cursor-pointer`}>
                     {link.text}
+                    <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                   </li>
                 </a>
               ))}

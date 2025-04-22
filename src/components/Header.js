@@ -19,6 +19,14 @@ export const navLinks = [
     text: "Games",
     href: "#",
   },
+  {
+    text: "AI",
+    href: "#",
+  },
+  {
+    text: "OS",
+    href: "#",
+  },
 ];
 
 export const smallScreenNavItems = [
@@ -26,5 +34,8 @@ export const smallScreenNavItems = [
   "About",
   "Contact",
   "Games",
+  "Apps",
+  "AI",
+  "OS",
   "Login/Create Account",
 ];
