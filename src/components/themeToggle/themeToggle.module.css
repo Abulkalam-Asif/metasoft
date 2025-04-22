@@ -8,9 +8,9 @@
   fill: var(--icon-fill);
 }
 
-.theme-toggle:is(:hover, :focus-visible)>.sun-and-moon> :is(.moon, .sun) {
+/* .theme-toggle:is(:hover, :focus-visible)>.sun-and-moon> :is(.moon, .sun) {
   fill: var(--icon-fill-hover);
-}
+} */
 
 .sun-and-moon>.sun-beams {
   stroke: var(--icon-fill);

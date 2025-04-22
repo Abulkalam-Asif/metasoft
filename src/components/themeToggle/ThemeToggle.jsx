@@ -70,7 +70,7 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className={`${styles["theme-toggle"]} fixed left-10 top-13 -translate-y-1/2 z-50 cursor-pointer`}
+      className={`${styles["theme-toggle"]} fixed left-10 top-13 -translate-y-1/2 z-50 cursor-pointer border-2 rounded-full p-1.5`}
       id="theme-toggle"
       title="Toggles light & dark"
       aria-label="auto"

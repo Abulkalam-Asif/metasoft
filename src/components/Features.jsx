@@ -16,7 +16,7 @@ const Features = () => {
             New Update 1.0
           </span>
           <h3 className="flex gap-1 text-xl sm:text-2xl md:text-4xl font-bold text-[#FFA5F6]">
-            Check out our new <h3 className="text-white">AI chatbot</h3>
+            Check out our new <span className="text-white">AI chatbot</span>
           </h3>
         </div>
         <div className="text-white mb-8 h-[300px] w-11/12 sm:w-4/5 md:w-2/3 lg:h-1/2  mx-auto rounded-2xl overflow-hidden ">
