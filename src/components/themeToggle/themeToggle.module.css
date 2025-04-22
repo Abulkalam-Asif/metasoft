@@ -17,9 +17,9 @@
   stroke-width: 2px;
 }
 
-.theme-toggle:is(:hover, :focus-visible) .sun-and-moon>.sun-beams {
+/* .theme-toggle:is(:hover, :focus-visible) .sun-and-moon>.sun-beams {
   stroke: var(--icon-fill-hover);
-}
+} */
 
 [data-theme="dark"] .sun-and-moon>.sun {
   transform: scale(1.75);
