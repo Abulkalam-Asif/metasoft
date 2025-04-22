@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./themeToggle.module.css";
 import { useTheme } from "../../context/ThemeContext";
 
-const ThemeToggle = () => {
+const ThemeToggle = ({ screen }) => {
   const { toggleTheme } = useTheme();
   const storageKey = "theme-preference";
 
@@ -70,7 +70,7 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className={`${styles["theme-toggle"]} fixed left-10 top-13 -translate-y-1/2 z-50 cursor-pointer border-2 rounded-full p-1.5`}
+      className={`${styles["theme-toggle"]} cursor-pointer border-2 rounded-full p-1.5`}
       id="theme-toggle"
       title="Toggles light & dark"
       aria-label="auto"
@@ -82,7 +82,7 @@ const ThemeToggle = () => {
         width="24"
         height="24"
         viewBox="0 0 24 24">
-        <mask className={styles.moon} id="moon-mask">
+        <mask className={styles.moon} id={`${screen}-moon-mask`}>
           <rect x="0" y="0" width="100%" height="100%" fill="white" />
           <circle cx="24" cy="10" r="6" fill="black" />
         </mask>
@@ -91,7 +91,7 @@ const ThemeToggle = () => {
           cx="12"
           cy="12"
           r="6"
-          mask="url(#moon-mask)"
+          mask={`url(#${screen}-moon-mask)`}
           fill="currentColor"
         />
         <g className={styles["sun-beams"]} stroke="currentColor">

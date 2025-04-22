@@ -3,12 +3,10 @@ import { navLinks } from "./Header";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoPerson } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
-import { useTheme } from "../context/ThemeContext";
 import logo from "../assets/images/logo.svg";
 import ThemeToggle from "./themeToggle/ThemeToggle";
 
 const LargeScreenNav = () => {
-  const { isDarkMode } = useTheme();
   const location = useLocation();
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
@@ -44,35 +42,25 @@ const LargeScreenNav = () => {
   };
 
   return (
-    <div>
+    <div className="hidden lg:block">
       <nav
-        className={`fixed ${
-          isDarkMode ? "text-white" : "text-black"
-        } top-0 z-50 w-full font-roboto whitespace-nowrap animate-fade-in`}>
-        <div className="max-w-[1550px] backdrop-blur-md hidden lg:flex gap-8 w-4/5 mx-auto border items-center justify-between text-[var(--text-primary)] border-[var(--text-primary)]/50 rounded-3xl px-6 py-4 my-5">
+        className={`fixed dark:text-white text-black top-0 z-50 w-full font-roboto whitespace-nowrap animate-fade-in`}>
+        <div className="max-w-[1550px] backdrop-blur-md flex gap-8 w-4/5 mx-auto border items-center justify-between text-[var(--text-primary)] border-[var(--text-primary)]/50 rounded-3xl px-6 py-4 my-5">
           <div className="w-max flex gap-x-6 items-center">
-            <Link
-              className={`${isDarkMode ? "brightness-100" : "brightness-10"}`}
-              to={"/"}>
+            <Link className={`dark:brightness-100 brightness-10`} to={"/"}>
               <img src={logo} alt="logo" className="h-8 w-auto" />
             </Link>
 
             <div className="relative">
               <FaSearch
-                className={`absolute top-1/2 -translate-y-1/2 left-4  ${
-                  isDarkMode ? "text-[#666b75]" : "text-[#ffffff]"
-                }  text-lg`}
+                className={`absolute top-1/2 -translate-y-1/2 left-4 dark:;text-[#666b75] text-[#ffffff] text-lg`}
               />
               <input
                 type="text"
                 name=""
                 id=""
                 placeholder="Search"
-                className={`w-full ${
-                  isDarkMode
-                    ? "bg-[#21222d] placeholder:text-[#666b75]"
-                    : "bg-[#848485] placeholder:text-[#ffffff]"
-                } text-white py-1 pl-12 pr-4 rounded-xl `}
+                className={`w-full dark:bg-[#21222d] dark:placeholder:text-[#666b75] bg-[#848485] placeholder:text-[#ffffff] text-white py-1 pl-12 pr-4 rounded-xl `}
               />
             </div>
             <ul className="flex gap-4">
@@ -82,18 +70,14 @@ const LargeScreenNav = () => {
                   key={index}
                   onClick={(e) => handleNavClick(e, link.href)}>
                   <li
-                    className={`hover:underline underline-offset-4 ${
-                      isDarkMode
-                        ? "text-white/50 hover:text-white"
-                        : "text-black hover:text-gray-900"
-                    } transition-colors duration-300 hover:cursor-pointer`}>
+                    className={`hover:underline underline-offset-4 dark:text-white/50 dark:hover:text-white text-black hover:text-gray-900 transition-colors duration-300 hover:cursor-pointer`}>
                     {link.text}
                   </li>
                 </a>
               ))}
             </ul>
           </div>
-          <ul className="flex gap-4 font-medium text-sm">
+          <ul className="flex gap-4 font-medium items-center text-sm">
             <li>
               <Link
                 to={"/login"}
@@ -104,10 +88,12 @@ const LargeScreenNav = () => {
                 <span>Log in</span>
               </Link>
             </li>
+            <li>
+              <ThemeToggle screen="large"/>
+            </li>
           </ul>
         </div>
       </nav>
-      <ThemeToggle />
     </div>
   );
 };

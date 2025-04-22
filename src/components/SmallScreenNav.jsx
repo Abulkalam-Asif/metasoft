@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import { FaSearch } from "react-icons/fa";
+import ThemeToggle from "./themeToggle/ThemeToggle";
 
 const SmallScreenNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,16 +18,17 @@ const SmallScreenNav = () => {
     <nav className="fixed top-0 z-50 w-full lg:hidden animate-fade-in">
       <div className="flex flex-col w-4/5 mx-auto border backdrop-blur-md border-white/50 rounded-3xl px-4 py-5 my-7">
         <div className="flex justify-between items-center">
-          <Link to={"/"}>
+          <Link className={`dark:brightness-100 brightness-10`} to={"/"}>
             <img src={logo} alt="logo" className="h-6 w-auto" />
           </Link>
           <div>
             <button
-              className="hover:cursor-pointer text-white/50 text-2xl"
+              className="hover:cursor-pointer text-black/50 dark:text-white/50 text-2xl"
               onClick={toggleNavState}>
               <IoMenu />
             </button>
           </div>
+          <ThemeToggle screen="small" />
         </div>
         <motion.ul
           animate={{ height: isMenuOpen ? "auto" : 0 }}
