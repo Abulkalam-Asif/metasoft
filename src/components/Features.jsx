@@ -21,7 +21,7 @@ const Features = () => {
           </h3>
           <Link
             to={"/"}
-            className={`mt-8 group cursor-pointer font-bold flex items-center justify-center gap-4 md:gap-7 py-2 px-8 rounded-full transition-all duration-300 border border-[#FF7EED] text-base md:text-xl dark:bg-[#19021D] dark:text-white dark:hover:text-[#FF7EED] bg-white text-gray-900 hover:text-[#FF7EED]`}>
+            className={`mt-8 group cursor-pointer font-bold flex items-center justify-center gap-4 md:gap-7 py-2 px-8 rounded-full transition-all duration-300 border border-[#FF7EED] text-base md:text-xl dark:bg-black/50 dark:text-white dark:hover:text-[#FF7EED] bg-white text-gray-900  hover:text-[#FF7EED]`}>
             <span className="font-roboto">Try now</span>
             <span className="group-hover:translate-x-0 -translate-x-3 group-hover:-rotate-45 transition-all duration-300">
               <FaArrowRight />

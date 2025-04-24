@@ -65,7 +65,7 @@ const LargeScreenNav = () => {
                   <li
                     className={`dark:text-white/50 dark:hover:text-white text-black hover:text-gray-900 transition-colors duration-300 hover:cursor-pointer`}>
                     {link.text}
-                    <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gray-900 dark:bg-white transition-all duration-300 group-hover:w-full"></span>
                   </li>
                 </a>
               ))}

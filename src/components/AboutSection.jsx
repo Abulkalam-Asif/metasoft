@@ -10,7 +10,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 1 }}
           transition={{ duration: 1 }}
-          className="max-w-7xl bg-[var(--bg-secondary)]/80 mx-auto border border-[var(--accent-primary)]/30 rounded-3xl"
+          className="max-w-7xl bg-gradient-to-r from-white to-white dark:bg-[linear-gradient(120deg,rgba(0,0,0,0.8)_0%,rgba(109,67,255,0.6)_100%)] mx-auto border border-black overflow-hidden rounded-3xl"
         >
           <div className="flex flex-col p-8 sm:p-12 md:p-16 lg:p-20 gap-y-4">
             <h3 className="text-base md:text-lg font-bold text-[var(--text-primary)]">
