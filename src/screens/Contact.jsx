@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const Contact = () => {
   return (
@@ -16,13 +15,13 @@ export const Contact = () => {
           </p>
         </div>
         <div className="bg-pink-50 dark:bg-gray-800 p-4 sm:p-6 text-center">
-        <Link
+          <Link
             to={"/"}
-           className="px-4 py-2 bg-pink-200 hover:bg-pink-300 dark:bg-pink-600 dark:hover:bg-pink-500 rounded-lg font-medium text-pink-700 dark:text-pink-100 transition duration-200">
+            className="px-4 py-2 bg-pink-200 hover:bg-pink-300 dark:bg-pink-600 dark:hover:bg-pink-500 rounded-lg font-medium text-pink-700 dark:text-pink-100 transition duration-200">
             Return Home
           </Link>
         </div>
       </div>
     </div>
   );
-}
+};

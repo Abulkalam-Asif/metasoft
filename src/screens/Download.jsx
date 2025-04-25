@@ -8,8 +8,7 @@ const Download = () => {
     <div>
       <SmallScreenNav />
       <LargeScreenNav />
-      <DownloadSection></DownloadSection>
-    
+      <DownloadSection />
     </div>
   );
 };

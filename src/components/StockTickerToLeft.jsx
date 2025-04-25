@@ -21,7 +21,7 @@ export default function DownloadTicker() {
   ];
 
   const StockTickerToLeft = ({ item }) => (
-    <li className="flex flex-col items-center  py-2 px-16 gap-2 rounded-3xl bg-gradient-to-br dark:from-red-600 dark:via-red-600/50  dark:to-white/40 from-[#FF7EED] to-[#FF7EED]/20">
+    <li className="flex flex-col items-center  py-2 px-16 gap-2 rounded-3xl bg-gradient-to-br dark:from-red-600 dark:to-red-600/20 from-[#FF7EED] to-[#FF7EED]/60">
       <span className="text-[var(--text-primary)] text-2xl font-bold">
         {item.text}
       </span>
@@ -45,8 +45,7 @@ export default function DownloadTicker() {
 
         <ul
           className="list-none flex-shrink-0 min-w-full flex justify-between items-center gap-5 animate-ticker-left"
-          aria-hidden="true"
-        >
+          aria-hidden="true">
           {data.map((item, index) => (
             <StockTickerToLeft key={`item-clone-${index}`} item={item} />
           ))}

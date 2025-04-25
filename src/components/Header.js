@@ -1,41 +1,61 @@
 export const navLinks = [
   {
     text: "Home",
-    href: "#home",
+    to: "#home",
   },
   {
     text: "About",
-    href: "#about",
+    to: "#about",
   },
   {
     text: "Contact",
-    href: "#",
+    to: "#contact",
   },
   {
     text: "Apps",
-    href: "#",
+    to: "#",
   },
   {
     text: "Games",
-    href: "#",
+    to: "#",
   },
   {
     text: "AI",
-    href: "#",
+    to: "#",
   },
   {
     text: "OS",
-    href: "#",
+    to: "#",
   },
 ];
 
 export const smallScreenNavItems = [
-  "Home",
-  "About",
-  "Contact",
-  "Games",
-  "Apps",
-  "AI",
-  "OS",
-  "Login/Create Account",
+  {
+    text: "Home",
+    to: "#home",
+  },
+  {
+    text: "About",
+    to: "#about",
+  },
+  {
+    text: "Contact",
+    to: "#contact",
+  },
+  {
+    text: "Apps",
+    to: "#",
+  },
+  {
+    text: "Games",
+    to: "#",
+  },
+  {
+    text: "AI",
+    to: "#",
+  },
+  {
+    text: "OS",
+    to: "#",
+  },
 ];

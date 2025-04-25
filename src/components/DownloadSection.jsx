@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo.svg";
+import logoPink from "../assets/images/logoPink.svg";
 import DownloadButton from "./DownloadButton";
 
 const DownloadSection = () => {
@@ -10,7 +11,12 @@ const DownloadSection = () => {
         <img
           src={logo}
           alt="MetaSoft Logo"
-          className={`h-16 md:h-24 w-auto mb-8 dark:brightness-100 brightness-20`}
+          className={`h-16 md:h-24 w-auto mb-8 dark:block hidden`}
+        />
+        <img
+          src={logoPink}
+          alt="MetaSoft Logo"
+          className={`h-16 md:h-24 w-auto mb-8 block dark:hidden`}
         />
 
         <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-6 text-center">

@@ -4,6 +4,7 @@ import { smallScreenNavItems } from "./Header";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
+import logoLight from "../assets/images/logoLight.svg";
 import ThemeToggle from "./themeToggle/ThemeToggle";
 import SearchBar from "./SearchBar";
 
@@ -16,10 +17,19 @@ const SmallScreenNav = () => {
 
   return (
     <nav className="fixed top-0 z-50 w-full lg:hidden animate-fade-in">
-      <div className="flex flex-col w-4/5 mx-auto border backdrop-blur-md border-white/50 rounded-3xl px-4 py-5 my-7">
+      <div className="flex flex-col w-4/5 mx-auto border backdrop-blur-md border-white/50 rounded-3xl px-4 py-5 my-7 bg-[#FF7EED] dark:bg-transparent">
         <div className="flex justify-between items-center">
-          <Link className={`dark:brightness-100 brightness-10`} to={"/"}>
-            <img src={logo} alt="logo" className="h-6 w-auto" />
+          <Link to={"/"}>
+            <img
+              src={logo}
+              alt="logo"
+              className="h-6 w-auto hidden dark:block"
+            />
+            <img
+              src={logoLight}
+              alt="logo"
+              className="h-6 w-auto block dark:hidden"
+            />
           </Link>
           <div>
             <button
@@ -41,7 +51,7 @@ const SmallScreenNav = () => {
             <li
               key={index}
               className="py-2 relative group hover:text-white/80 transition-colors duration-300 hover:cursor-pointer">
-              <Link to={"/"}>{item}</Link>
+              <Link to={item.to}>{item.text}</Link>
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </li>
           ))}
