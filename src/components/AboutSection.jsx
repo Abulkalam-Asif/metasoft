@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 const AboutSection = () => {
   return (
     <>
-      <section id="about" className="pb-12 px-4 bg-transparent">
+      <section id="about"  className=" pb-12 px-4 bg-transparent">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
