@@ -7,8 +7,8 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import StockTickerToLeft from "../components/StockTickerToLeft";
 import Features from "../components/Features";
 import Softwares from "../components/Softwares";
-// import CookieAlert from "../components/CookieAlert";
 import { ContactForm } from "../components/ContactForm";
+import CookieBanner from "../components/Cookie";
 const Home = () => {
   return (
     <>
@@ -22,7 +22,7 @@ const Home = () => {
       </div>
       <Features />
       <Softwares />
-      {/* <CookieAlert /> */}
+      <CookieBanner />
       <ContactForm/>
     </>
   );
