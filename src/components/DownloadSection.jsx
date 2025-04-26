@@ -28,7 +28,7 @@ const DownloadSection = () => {
           Download our app now and unlock a world of possibilities with
           cutting-edge features and seamless integration.
         </p>
-        <DownloadButton></DownloadButton>
+        <DownloadButton />
       </div>
     </div>
   );

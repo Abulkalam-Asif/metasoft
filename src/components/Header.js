@@ -1,61 +1,61 @@
 export const navLinks = [
   {
     text: "Home",
-    to: "#home",
+    to: "/",
   },
   {
     text: "About",
-    to: "#about",
+    to: "/#about",
   },
   {
     text: "Contact",
-    to: "#contact",
+    to: "/#contact",
   },
   {
     text: "Apps",
-    to: "#",
+    to: "/apps",
   },
   {
     text: "Games",
-    to: "#",
+    to: "/games",
   },
   {
     text: "AI",
-    to: "#",
+    to: "/#ai",
   },
   {
     text: "OS",
-    to: "#",
+    to: "/os",
   },
 ];
 
 export const smallScreenNavItems = [
   {
     text: "Home",
-    to: "#home",
+    to: "/",
   },
   {
     text: "About",
-    to: "#about",
+    to: "/#about",
   },
   {
     text: "Contact",
-    to: "#contact",
+    to: "/#contact",
   },
   {
     text: "Apps",
-    to: "#",
+    to: "/apps",
   },
   {
     text: "Games",
-    to: "#",
+    to: "/games",
   },
   {
     text: "AI",
-    to: "#",
+    to: "/#ai",
   },
   {
     text: "OS",
-    to: "#",
+    to: "/os",
   },
 ];

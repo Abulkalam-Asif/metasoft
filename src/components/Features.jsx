@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Features = () => {
   return (
-    <section className="mb-12 px-4">
+    <section id="ai" className="mb-12 px-4">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ const Features = () => {
             Check out our new <span className="text-white">AI chatbot</span>
           </h3>
           <Link
-            to={"/"}
+            to={"/ai"}
             className={`mt-8 group cursor-pointer font-bold flex items-center justify-center gap-4 md:gap-7 py-2 px-8 rounded-full transition-all duration-300 border border-[#FF7EED] text-base md:text-xl dark:bg-black/50 dark:text-white dark:hover:text-[#FF7EED] bg-white text-gray-900  hover:text-[#FF7EED]`}>
             <span className="font-roboto">Try now</span>
             <span className="group-hover:translate-x-0 -translate-x-3 group-hover:-rotate-45 transition-all duration-300">
@@ -29,12 +29,12 @@ const Features = () => {
           </Link>
         </div>
         <div className="text-white mb-8 h-[300px] w-11/12 sm:w-4/5 md:w-2/3 lg:h-1/2  mx-auto rounded-2xl overflow-hidden ">
-          <video
+          {/* <video
             src="https://store.ccleaf.com/img/home_showcase.mp4"
             className="w-full h-full object-cover"
             autoPlay
             loop
-            muted></video>
+            muted></video> */}
         </div>
       </motion.div>
     </section>

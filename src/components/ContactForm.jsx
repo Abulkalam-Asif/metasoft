@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 
 export const ContactForm = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showAdminPanel, setShowAdminPanel] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
+    reason: "",
   });
   const [messages, setMessages] = useState([
     {
@@ -41,6 +41,7 @@ export const ContactForm = () => {
         email: localStorage.getItem("userEmail") || "",
         subject: "",
         message: "",
+        reason: "",
       });
     }
   }, []);
@@ -69,20 +70,11 @@ export const ContactForm = () => {
       email: isLoggedIn ? formData.email : "",
       subject: "",
       message: "",
+      reason: "",
     });
 
     // Show confirmation
     alert("Message sent successfully! Our team will contact you soon.");
-  };
-
-  const toggleAdminPanel = () => {
-    setShowAdminPanel((prev) => !prev);
-  };
-
-  const handleMessageAction = (id, action) => {
-    setMessages((prev) =>
-      prev.map((msg) => (msg.id === id ? { ...msg, status: action } : msg))
-    );
   };
 
   return (
@@ -134,19 +126,38 @@ export const ContactForm = () => {
                 />
               </div>
 
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-400 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                  placeholder="What is this regarding?"
-                  required
-                />
+              <div className="md:col-span-2 grid grid-cols-3 gap-6">
+                <div className="col-span-2">
+                  <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-400 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    placeholder="What is this regarding?"
+                    required
+                  />
+                </div>
+                <div className="col-span-1">
+                  <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">
+                    Reason
+                  </label>
+                  <select
+                    name="reason"
+                    value={formData.reason}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 border border-gray-400 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    required>
+                    <option value="">Select a reason</option>
+                    <option value="inquiry">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
               </div>
 
               <div className="md:col-span-2">
@@ -174,88 +185,6 @@ export const ContactForm = () => {
           </form>
         </div>
       </div>
-
-      {/* Admin Panel Toggle (This would normally be protected) */}
-      <div className="text-center mb-4">
-        <button
-          onClick={toggleAdminPanel}
-          className="text-sm text-gray-600 hover:text-gray-800 underline">
-          {showAdminPanel ? "Hide Admin Panel" : "Show Admin Panel (Demo)"}
-        </button>
-      </div>
-
-      {/* Admin Panel */}
-      {showAdminPanel && (
-        <div className="bg-gray-50 dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden">
-          <div className="bg-gray-200 dark:bg-gray-700 px-6 py-4 border-b">
-            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
-              Admin Message Panel
-            </h3>
-          </div>
-
-          <div className="divide-y">
-            {messages.map((msg) => (
-              <div key={msg.id} className="p-6">
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h4 className="font-medium text-gray-900">{msg.subject}</h4>
-                    <p className="text-sm text-gray-600">
-                      From: {msg.name} ({msg.email})
-                    </p>
-                  </div>
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => handleMessageAction(msg.id, "responded")}
-                      className={`px-3 py-1 text-xs rounded-full ${
-                        msg.status === "responded"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-gray-100 text-gray-800 hover:bg-green-100 hover:text-green-800"
-                      }`}>
-                      {msg.status === "responded"
-                        ? "Responded"
-                        : "Mark Responded"}
-                    </button>
-                    <button
-                      onClick={() => handleMessageAction(msg.id, "dismissed")}
-                      className={`px-3 py-1 text-xs rounded-full ${
-                        msg.status === "dismissed"
-                          ? "bg-gray-500 text-white"
-                          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
-                      }`}>
-                      {msg.status === "dismissed" ? "Dismissed" : "Dismiss"}
-                    </button>
-                    <button
-                      onClick={() => handleMessageAction(msg.id, "reported")}
-                      className={`px-3 py-1 text-xs rounded-full ${
-                        msg.status === "reported"
-                          ? "bg-red-100 text-red-800"
-                          : "bg-gray-100 text-gray-800 hover:bg-red-100 hover:text-red-800"
-                      }`}>
-                      {msg.status === "reported" ? "Reported" : "Report"}
-                    </button>
-                  </div>
-                </div>
-                <div className="bg-white dark:bg-gray-900 p-4 rounded-lg mb-3">
-                  <p className="text-gray-900 dark:text-gray-100">
-                    {msg.message}
-                  </p>
-                </div>
-                <div className="mt-3">
-                  <textarea
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                    rows="2"
-                    placeholder="Type your response..."></textarea>
-                  <div className="mt-2 flex justify-end">
-                    <button className="px-4 py-2 bg-pink-600 text-white text-sm font-medium rounded-lg hover:bg-pink-700">
-                      Send Response
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 };

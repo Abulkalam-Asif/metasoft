@@ -66,7 +66,7 @@ const LargeScreenNav = () => {
             <li>
               <Link
                 to={"/login"}
-                className="flex items-center justify-center gap-3 cursor-pointer bg-[#3f3f46]  transition-colors duration-300  py-1.5 px-4 border-2 border-[#71717a] text-white text-sm rounded-full  hover:text-[#FF7EED] hover:bg-[#310F2D] hover:border-[#FF7EED]">
+                className="flex items-center justify-center gap-3 cursor-pointer bg-[#3f3f46]  transition-colors duration-300  py-1.5 px-4 border-2 border-[#71717a] text-white text-sm rounded-full  hover:text-[#FF7EED] hover:bg-white dark:hover:bg-[#310F2D] hover:border-[#FF7EED]">
                 <span className="text-base">
                   <IoPerson />
                 </span>
@@ -75,6 +75,16 @@ const LargeScreenNav = () => {
             </li>
             <li>
               <ThemeToggle screen="large" />
+            </li>
+            <li>
+              <Link
+                to={"/"}
+                className="flex items-center justify-center gap-3 cursor-pointer bg-[#3f3f46]  transition-colors duration-300  py-1.5 px-4 border-2 border-[#71717a] text-white text-sm rounded-full  hover:text-[#FF7EED] hover:bg-white dark:hover:bg-[#310F2D] hover:border-[#FF7EED]">
+                <span className="text-base">
+                  <IoPerson />
+                </span>
+                <span>Admin panel</span>
+              </Link>
             </li>
           </ul>
         </div>

@@ -7,9 +7,13 @@ import { AppPage } from "./screens/AppPage";
 import { Games } from "./screens/Games";
 import { AI } from "./screens/AI";
 import { OS } from "./screens/OS";
+import LargeScreenNav from "./components/LargeScreenNav";
+import SmallScreenNav from "./components/SmallScreenNav";
 const App = () => {
   return (
     <>
+      <SmallScreenNav />
+      <LargeScreenNav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
