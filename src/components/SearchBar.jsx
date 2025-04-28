@@ -9,9 +9,9 @@ const SearchBar = ({ isSmallScreen = false }) => {
   return (
     <div className="relative w-full">
       <FaSearch
-        className={`absolute top-1/2 -translate-y-1/2 left-4 z-[1] dark:text-[#666b75] text-[#ffffff] text-lg`}
+        className={`absolute top-1/2 -translate-y-1/2 left-2 z-[1] dark:text-[#666b75] text-[#ffffff] text-lg xl:left-4`}
       />
-      <div className="relative">
+      <div className="relative min-w-[160px]">
         <input
           type="text"
           name="search"
@@ -21,14 +21,12 @@ const SearchBar = ({ isSmallScreen = false }) => {
           onBlur={() => setIsFocused(false)}
           className={`w-full dark:bg-[#21222d] dark:placeholder:text-[#666b75] bg-[#848485] placeholder:text-[#ffffff] text-white ${
             isSmallScreen ? "py-2" : "py-1"
-          } pl-12 pr-4 rounded-xl`}
+          } pl-8 xl:pl-12 pr-4 rounded-xl`}
         />
         {!isFocused && !searchValue && (
           <div
-            className={`absolute inset-0 pointer-events-none flex items-center ${
-              isSmallScreen ? "pl-12" : "pl-12"
-            }`}>
-            <span className={`dark:text-[#666b75] text-[#ffffff]`}>
+            className={`absolute inset-0 pointer-events-none flex items-center pl-8 xl:pl-12 `}>
+            <span className={`text-sm dark:text-[#666b75] text-[#ffffff]`}>
               Search for <TypewriterEffect />
             </span>
           </div>

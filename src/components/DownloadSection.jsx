@@ -7,7 +7,7 @@ const DownloadSection = () => {
   return (
     <div
       className={`relative min-h-screen flex items-center dark:before:bg-[radial-gradient(circle_at_28%_31%,#2F1F6C_0%,black_70%_50%)] dark:after:bg-[radial-gradient(circle_at_58%_60%,#2F1F6C_0%,black_70%_50%)] before:bg-[radial-gradient(circle_at_28%_31%,#ffe4f9_0%,white_70%_50%)] after:bg-[radial-gradient(circle_at_58%_60%,#ffe4f9_0%,white_70%_50%)] before:absolute before:left-0 before:top-0 before:w-full before:h-1/2 before:z-[0] after:absolute after:right-0 after:bottom-0 after:w-full after:h-1/2 after:z-[0] animate-fade-in md:before:w-1/2 md:before:h-full md:after:w-1/2 md:after:h-full`}>
-      <div className="relative flex flex-col justify-center items-center max-w-[1550px] mx-auto w-full z-[1] px-4">
+      <div className="relative flex flex-col justify-center items-center max-w-[1550px] mx-auto w-full z-[1] px-4 mt-24">
         <img
           src={logo}
           alt="MetaSoft Logo"

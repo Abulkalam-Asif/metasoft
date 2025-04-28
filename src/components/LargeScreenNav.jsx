@@ -31,7 +31,7 @@ const LargeScreenNav = () => {
     <div className="hidden lg:block">
       <nav
         className={`fixed dark:text-white text-black top-0 z-50 w-full font-roboto whitespace-nowrap animate-fade-in`}>
-        <div className="max-w-[1550px] backdrop-blur-md flex gap-8 w-4/5 mx-auto border items-center justify-between text-[var(--text-primary)] border-[var(--text-primary)]/50 rounded-3xl px-6 py-4 my-5 bg-[#FF7EED] dark:bg-transparent">
+        <div className="max-w-[1550px] backdrop-blur-md flex gap-8 w-[90%] xl:w-4/5 mx-auto border items-center justify-between text-[var(--text-primary)] border-[var(--text-primary)]/50 rounded-3xl px-6 py-4 my-5 bg-[#FF7EED] dark:bg-transparent">
           <div className="w-max flex gap-x-6 items-center">
             <Link to={"/"}>
               <img
