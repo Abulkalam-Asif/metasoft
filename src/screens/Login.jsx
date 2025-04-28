@@ -2,7 +2,7 @@ import React from "react";
 
 const login = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[radial-gradient(circle_at_28%_20%,#ffe4f9_0%,white_70%_50%)] dark:bg-[radial-gradient(circle_at_28%_20%,#2F1F6C_0%,black_50%_50%)]">
+    <div className="flex items-center justify-center min-h-screen bg-[radial-gradient(circle_at_28%_20%,#ffe4f9_0%,white_70%_50%)] dark:bg-[radial-gradient(circle_at_28%_20%,#2F1F6C_0%,black_50%_50%)] pt-32 pb-8">
       <div className="w-80 sm:w-100 rounded-xl p-8 bg-white text-gray-900 shadow-md dark:bg-gray-900 dark:text-gray-100">
         <h2 className="text-center text-3xl font-bold text-[#FF7EED]">Login</h2>
 
