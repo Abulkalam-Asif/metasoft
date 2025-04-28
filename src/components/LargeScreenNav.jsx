@@ -6,6 +6,8 @@ import logo from "../assets/images/logo.svg";
 import logoLight from "../assets/images/logoLight.svg";
 import ThemeToggle from "./themeToggle/ThemeToggle";
 import SearchBar from "./SearchBar";
+import { MdShield } from "react-icons/md";
+import { TbUserFilled } from "react-icons/tb";
 
 const LargeScreenNav = () => {
   const location = useLocation();
@@ -76,14 +78,12 @@ const LargeScreenNav = () => {
             <li>
               <ThemeToggle screen="large" />
             </li>
-            <li>
-              <Link
-                to={"/"}
-                className="flex items-center justify-center gap-3 cursor-pointer bg-[#3f3f46]  transition-colors duration-300  py-1.5 px-4 border-2 border-[#71717a] text-white text-sm rounded-full  hover:text-[#FF7EED] hover:bg-white dark:hover:bg-[#310F2D] hover:border-[#FF7EED]">
-                <span className="text-base">
-                  <IoPerson />
+            <li className="mx-3">
+              <Link to={"/"}>
+                <span className="relative">
+                  <MdShield className="text-4xl text-[#3f3f46] dark:text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+                  <TbUserFilled className="text-xl text-white dark:text-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
                 </span>
-                <span>Admin panel</span>
               </Link>
             </li>
           </ul>

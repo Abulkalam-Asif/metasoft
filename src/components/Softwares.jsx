@@ -19,7 +19,7 @@ const Softwares = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="mx-auto mt-12 mb-12 md:mt-20 md:mb-20 flex w-full md:w-3/5 flex-col items-center gap-2 px-4"
+      className="mx-auto mt-12 md:mt-20 md:mb-20 flex w-full md:w-3/5 flex-col items-center gap-2 px-4"
     >
       <div className="flex h-auto w-full flex-row items-center justify-center gap-4 md:gap-6 overflow-x-auto sm:overflow-visible rounded-2xl bg-[#606060]/20 px-4 py-6 md:px-6">
         {featuresList.map((feature, index) => (
