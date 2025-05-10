@@ -1,6 +1,5 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
-
-const ThemeContext = createContext();
+import React, { useState, useEffect } from "react";
+import { ThemeContext } from "./ThemeContext";
 
 export const ThemeProvider = ({ children }) => {
   // Initialize theme from localStorage or system preference
@@ -11,11 +10,17 @@ export const ThemeProvider = ({ children }) => {
     }
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   };
+
   const [isDarkMode, setIsDarkMode] = useState(getInitialMode);
 
+  const applyTheme = (isDark) => {
+    document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", isDark);
+    document.documentElement.classList.toggle("light", !isDark);
+  };
+
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDarkMode);
-    document.documentElement.classList.toggle("light", !isDarkMode);
+    applyTheme(isDarkMode);
     // Persist preference
     localStorage.setItem("theme-preference", isDarkMode ? "dark" : "light");
   }, [isDarkMode]);
@@ -30,5 +35,3 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
-
-export const useTheme = () => useContext(ThemeContext);

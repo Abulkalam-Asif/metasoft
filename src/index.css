@@ -1,5 +1,6 @@
-@import "tailwindcss";
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
@@ -11,6 +12,12 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
 :root,
 [data-theme="light"] {
   --bg-primary: #fdfdfd;
@@ -19,7 +26,6 @@
   --text-secondary: rgba(26, 26, 26, 0.7);
   --accent-primary: #FF7EED;
   --gradient-primary: radial-gradient(circle at 28% 20%, #e5e7ff 0%, #ffffff 70%);
-  /* Theme toggle icon colors */
   --icon-fill: var(--text-primary);
   --icon-fill-hover: var(--accent-primary);
 }
@@ -32,39 +38,6 @@
   --text-secondary: rgba(255, 255, 255, 0.7);
   --accent-primary: #FF7EED;
   --gradient-primary: radial-gradient(circle at 28% 20%, #2F1F6C 0%, #0f0f13 70%);
-  /* Theme toggle icon colors */
   --icon-fill: var(--text-primary);
   --icon-fill-hover: var(--accent-primary);
-}
-
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-@theme {
-  --font-roboto: "Roboto";
-
-  --animate-fade-in: fadeIn 1s ease-in-out;
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-}
-
-@theme {
-  --animate-ticker-left: scroll 40s linear infinite;
-
-  @keyframes scroll {
-    to {
-      transform: translateX(calc(-100% - 1.25rem));
-    }
-  }
 }

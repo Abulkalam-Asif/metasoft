@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./themeToggle.module.css";
-import { useTheme } from "../../context/ThemeContext";
+import { useTheme } from "../../context/useTheme";
 
 const ThemeToggle = ({ screen }) => {
   const { toggleTheme } = useTheme();
